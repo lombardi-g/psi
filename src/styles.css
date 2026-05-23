@@ -1,0 +1,27 @@
+/* ── CSS custom properties ── */
+:root {
+  --base: #aadcd9;
+  --secondary: #286b7b;
+  --upper-bar-border: #19424d;
+  --white: #ffffff;
+  --universityblue: #102955;
+  --universityyellow: #fed212;
+}
+
+/* ── global reset ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #102955;
+  background: #ffffff;
+  overflow-x: hidden;
+}

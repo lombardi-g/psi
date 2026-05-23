@@ -1,0 +1,19 @@
+<header>
+  <nav class="nav-container">
+    <div class="nav-logo">
+      <span class="logo-name">Maria Fernanda</span>
+      <span class="logo-role">Psicóloga do Esporte</span>
+    </div>
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li><a href="#inicio" (click)="closeMenu()">Início</a></li>
+      <li><a href="#sobre" (click)="closeMenu()">Sobre</a></li>
+      <li><a href="#ebooks" (click)="closeMenu()">E-books</a></li>
+      <li><a href="#contato" (click)="closeMenu()">Contato</a></li>
+    </ul>
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
