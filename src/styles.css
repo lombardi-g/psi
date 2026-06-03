@@ -1,3 +1,12 @@
+/* ── Korolev Medium ── */
+@font-face {
+  font-family: 'Korolev';
+  src: url('/fonts/KorolevMedium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ── CSS custom properties ── */
 :root {
   --base: #aadcd9;
@@ -6,6 +15,7 @@
   --white: #ffffff;
   --universityblue: #102955;
   --universityyellow: #fed212;
+  --font: 'Korolev', sans-serif;
 }
 
 /* ── global reset ── */
@@ -20,8 +30,8 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
-  color: #102955;
+  font-family: var(--font);
+  color: var(--universityblue);
   background: #ffffff;
   overflow-x: hidden;
 }
