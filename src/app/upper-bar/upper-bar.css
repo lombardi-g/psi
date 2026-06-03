@@ -1,6 +1,5 @@
 header {
   background-color: var(--secondary);
-  /* background-color: #286b7b; */
   border-bottom: 1px solid var(--upper-bar-border);
   position: sticky;
   top: 0;
@@ -13,13 +12,29 @@ header {
   padding: 0 32px;
   height: 60px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
+}
+
+/* ── brand block (image + name/role) ── */
+.nav-brand {
+  display: flex;
+  align-items: stretch;
+  gap: 1px;
+}
+
+.nav-logo-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  padding: 8px 0;
+  display: block;
 }
 
 .nav-logo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   line-height: 1.2;
 }
 
@@ -38,8 +53,10 @@ header {
   text-transform: uppercase;
 }
 
+/* ── nav links ── */
 .nav-links {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 36px;
 }
@@ -51,6 +68,7 @@ header {
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  white-space: nowrap;
   transition: color 0.2s;
   position: relative;
   padding-bottom: 2px;
@@ -75,8 +93,10 @@ header {
   width: 100%;
 }
 
+/* ── hamburger ── */
 .hamburger {
   display: none;
+  align-self: center;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -105,6 +125,7 @@ header {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ── mobile ── */
 @media (max-width: 768px) {
   header {
     height: auto;
@@ -112,8 +133,20 @@ header {
 
   .nav-container {
     flex-wrap: wrap;
-    padding: 14px 24px;
+    padding: 0 24px;
     height: auto;
+    min-height: 56px;
+    align-items: center;
+  }
+
+  .nav-brand {
+    align-self: center;
+    padding: 8px 0;
+  }
+
+  .nav-logo-img {
+    height: 40px;
+    padding: 0;
   }
 
   .hamburger {
@@ -124,6 +157,7 @@ header {
     display: none;
     width: 100%;
     flex-direction: column;
+    align-items: flex-start;
     gap: 0;
     padding-bottom: 8px;
   }
